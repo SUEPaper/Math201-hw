@@ -1,7 +1,9 @@
 # question 1
-# Write a function falling, which is a "falling" factorial that takes two arguments, n and k, 
-# and returns the product of k consecutive numbers, starting from n and working downwards.
-# When k is 0, the function should return 1.
+"""
+Write a function falling, which is a "falling" factorial that takes two arguments, n and k, 
+and returns the product of k consecutive numbers, starting from n and working downwards.
+When k is 0, the function should return 1.
+"""
 def falling(n, k):
     """
     >>> falling(6, 3)  # 6 * 5 * 4
@@ -12,14 +14,7 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
-    x = n
-    if k > 0:
-        for i in range(k-1):
-            n -= 1
-            x *= n
-        return x
-    else:
-        return 1
+
 
 
 # question 2
@@ -38,10 +33,8 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
-    x = 0
-    for i in str(y):
-        x += int(i)
-    return x
+
+
 
 # question 3.1
 # Write a function that takes in a number and determines if the digits contain two adjacent 8s.
@@ -61,19 +54,12 @@ def double_eights1(n):
     False
     """
     "*** YOUR CODE HERE ***"
-    while n > 0:
-        if n % 100 == 88:
-            return True
-        n //= 10
-    return False
+
+
 
 # question 3.2
-# Try another way to find problem3.1
+# Try another way to solve problem3.1
 def double_eights2(n):
     "*** YOUR CODE HERE ***"
-    while n > 0:
-        if n % 100 == 88:
-            return True
-        n //= 10
-    return False
+
 
