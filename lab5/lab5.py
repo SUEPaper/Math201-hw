@@ -1,1 +1,1 @@
-# List and tuple
+# Dictionary and synthesis

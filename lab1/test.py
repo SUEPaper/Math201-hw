@@ -1,5 +1,5 @@
 import unittest
-from lab1 import falling, sum_digits, double_eights1, double_eights2
+from lab1 import falling, sum_digits, double_eights1, double_eights2, prime_numbers
 
 
 class HomeWork1Test(unittest.TestCase):
@@ -30,6 +30,16 @@ class HomeWork1Test(unittest.TestCase):
         self.assertEqual(double_eights2(880088), True)
         self.assertEqual(double_eights2(12345), False)
         self.assertEqual(double_eights2(80808080), False)
+
+    def test_prime_numbers(self):
+        result = []
+        for i in range(2, 101):
+            for j in range(2, i):
+                if i % j == 0:
+                    break
+            else:
+                result.append(i)
+        self.assertEqual(prime_numbers(), result)
 
 if __name__ == '__main__':
     unittest.main()

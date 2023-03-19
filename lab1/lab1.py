@@ -1,5 +1,21 @@
 # Python basics(if,for,while)
+
 # question 1
+# Write a program that finds all prime numbers (numbers that are only divisible by 1 and itself) 
+# between 1 and 100 and returns the results in a list.
+# You can use the result.append() command to add the results of each loop to the list.
+def prime_numbers():
+    result = []
+    "*** YOUR CODE HERE ***"
+    for i in range(2, 101):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            result.append(i)
+    return result
+
+# question 2
 """
 Write a function falling, which is a "falling" factorial that takes two arguments, n and k, 
 and returns the product of k consecutive numbers, starting from n and working downwards.
@@ -15,10 +31,18 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    x = n
+    if k > 0:
+        for i in range(k-1):
+            n -= 1
+            x *= n
+        return x
+    else:
+        return 1
 
 
 
-# question 2
+# question 3
 # Write a function that takes in a nonnegative integer and sums its digits. 
 # (Using floor division and modulo might be helpful here!)
 def sum_digits(y):
@@ -34,10 +58,14 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
+    x = 0
+    for i in str(y):
+        x += int(i)
+    return x
 
 
 
-# question 3.1
+# question 4.1
 # Write a function that takes in a number and determines if the digits contain two adjacent 8s.
 def double_eights1(n):
     """
@@ -55,12 +83,25 @@ def double_eights1(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    number = 0
+    while n > 0:
+        if n % 10 == 8:
+            number += 1
+            if number == 2:
+                return True
+        else:
+            number = 0
+        n //= 10
+    return False
 
 
-
-# question 3.2
+# question 4.2
 # Try another way to solve problem3.1
 def double_eights2(n):
     "*** YOUR CODE HERE ***"
-
+    while n > 0:
+        if n % 100 == 88:
+            return True
+        n //= 10
+    return False
 
