@@ -23,8 +23,5 @@ class HomeWork1Test(unittest.TestCase):
         self.assertEqual(rule_numbers(numbers1), [4, 4, 64])
 
 
-    
-    
-
 if __name__ == '__main__':
     unittest.main()

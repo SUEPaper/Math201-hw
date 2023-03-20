@@ -9,10 +9,8 @@ def fibonacci_list(n):
     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
     """
     "*** YOUR CODE HERE ***"
-    fib = lambda x: x if x <= 1 else fib(x-1) + fib(x-2)
-    return [fib(i) for i in range(n)]
-    
-print(fibonacci_list(10))  # 
+
+
 
 # question2.1
 # Return the number of positive factors that n has.
@@ -24,13 +22,7 @@ def count_factors(n):
     3   # 1, 2, 4
     """
     "*** YOUR CODE HERE ***"
-    i = 1
-    count = 0
-    while i <= n:
-        if n % i == 0:
-            count += 1
-        i += 1
-    return count
+
 
 
 # question2.2
@@ -62,15 +54,8 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
-    def count(n):
-        i = 1
-        num = 0
-        while n >= i:
-            if condition(n, i):
-                num += 1
-            i += 1
-        return num
-    return count
+
+
 
 # question3
 """
@@ -112,15 +97,5 @@ def cycle(f1, f2, f3):
     19
     """
     "*** YOUR CODE HERE ***"
-    def my_cycle(n):
-        def small_cycle(x):
-            for i in range(1, n+1):
-                if i % 3 == 1:
-                    x = f1(x)
-                elif i % 3 == 2:
-                    x = f2(x)
-                elif i % 3 == 0:
-                    x = f3(x)
-            return x
-        return small_cycle
-    return my_cycle
+
+

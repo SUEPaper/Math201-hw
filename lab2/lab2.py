@@ -12,7 +12,7 @@ def square_even_numbers(n):
     [4, 16, 36, 64]
     """
     "*** YOUR CODE HERE ***"
-    return list(map(lambda x: x**2, filter(lambda x: x % 2 == 0, n)))
+    return 
 
 
 # question 2
@@ -27,7 +27,7 @@ def rule_numbers(n):
     [2, 4, 4, 8, 6, 12, 8, 16, 10]
     """
     "*** YOUR CODE HERE ***"
-    return list(map(lambda x: x * 2 if x % 2 == 0 else x + 1, n))
+    return 
 
 
 # question3
@@ -50,4 +50,4 @@ def lambda_curry2(func):
     3
     """
     "*** YOUR CODE HERE ***"
-    return lambda x: lambda y: func(x, y)
+    return 

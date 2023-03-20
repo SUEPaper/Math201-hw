@@ -7,13 +7,8 @@
 def prime_numbers():
     result = []
     "*** YOUR CODE HERE ***"
-    for i in range(2, 101):
-        for j in range(2, i):
-            if i % j == 0:
-                break
-        else:
-            result.append(i)
-    return result
+
+
 
 # question 2
 """
@@ -31,14 +26,6 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
-    x = n
-    if k > 0:
-        for i in range(k-1):
-            n -= 1
-            x *= n
-        return x
-    else:
-        return 1
 
 
 
@@ -58,10 +45,6 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
-    x = 0
-    for i in str(y):
-        x += int(i)
-    return x
 
 
 
@@ -83,25 +66,12 @@ def double_eights1(n):
     False
     """
     "*** YOUR CODE HERE ***"
-    number = 0
-    while n > 0:
-        if n % 10 == 8:
-            number += 1
-            if number == 2:
-                return True
-        else:
-            number = 0
-        n //= 10
-    return False
+
 
 
 # question 4.2
 # Try another way to solve problem3.1
 def double_eights2(n):
     "*** YOUR CODE HERE ***"
-    while n > 0:
-        if n % 100 == 88:
-            return True
-        n //= 10
-    return False
+
 
